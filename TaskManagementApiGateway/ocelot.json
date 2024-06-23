@@ -1,0 +1,115 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7278"
+  },
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/gateway/SignUp",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/UserManagement/SignUp",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7079
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/Login",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/UserManagement/Login",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7079
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/CreateTask",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/TaskCreation/CreateTask",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7145
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/GetAllTasks",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/TaskCreation/GetAllTasks",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7145
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/GetDropDownLists",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/TaskCreation/GetDropDownLists",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7145
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/SentNotification",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/AssignmentAndNotification/SentNotification",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7182
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/UpdateTask",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/TaskCreation/UpdateTask",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7145
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/GetTasksById/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/TaskCreation/GetTasksById/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7145
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/DeleteTasksById/{id}",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "DownstreamPathTemplate": "/api/TaskCreation/DeleteTasksById/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7145
+        }
+      ]
+    }
+  ]
+}

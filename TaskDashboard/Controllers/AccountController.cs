@@ -30,6 +30,7 @@ namespace TaskDashboard.Controllers
             LoginResponse loginResponse = new LoginResponse();
             using (var httpClient = new HttpClient())
             {
+
                 StringContent content = new StringContent(JsonConvert.SerializeObject(model), Encoding.UTF8, "application/json");
                 string url = _configuration["Url:UserManagementServiceUrl"] + TaskDashboardStaticValues.Login;
                 using (var response = await httpClient.PostAsync(url, content))

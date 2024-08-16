@@ -69,6 +69,7 @@ namespace UserManagementService.Controllers
         {
             if (ModelState.IsValid)
             {
+
                 var userDetail = _user.Login(loginRequest);
                 if (userDetail != null)
                 {
